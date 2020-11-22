@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px;
+                background-color: #f1f1f1; 
+            } 
+
+            /* Header/Blog title*/
+            .header {
+                padding: 30px;
+                text-align: center;
+                background-color: white;
+            }
+            .header h1 {
+                font-size: 50px;
+            }
+
+            /* style the top navigetion bar*/
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            /* change on hover */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            /* create two unequal columns that flaots next to each other*/
+            .leftcolmun {
+                float: left;
+                width: 75%;
+            }
+            /* right column */
+            .rightcolumn {
+                float:left;
+                width: 25%;
+                background-color: #f1f1f1;
+                padding-left: 20px;
+            }
+            /* fake image*/
+            .fakeimg {
+                background-color: #aaa;
+                width: 100%;
+                padding: 20px;
+            }
+            /*clear floats after the columns */
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /*footeer*/
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+                margin-top: 20px;
+            }
+            /* resposive layout - when the screen is less than 800px wide, make the two columns stack 
+            on top of each other instead of next to each other*/
+            @media screen and (max-width: 800px) {
+                .leftcolmun , .rightcolumn {
+                    width: 100px;
+                    padding: 0;
+                }
+            }
+            /* responsive layout - when the screen is less than 800px wide, make the two columns stack 
+            on top of each other instead of next to each other */
+            @media screen and (max-width:800px) {
+                .leftcolmun , .rightcolmunn {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            /*resposive layout - when the screen is less than 400px wide, make the the navigation links stack
+            on top of each other instead of next to each other */
+            @media screen and (max-width:400px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>My website</h1>
+            <p>resize the browser window to see the effect.</p>
+        </div>
+        <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#" style="float:right">link</a>
+        </div>
+        <div class="row">
+            <div class="leftcolmunn">
+                <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg" style="height: 200px;">Image</div>
+                    <p>Some text...</p>
+                    <p>Sunt in cuple qui officia deserunt mollit anim id est laborum consectetur 
+                        adipiscing elit, sed do eisumod tempor incididunt ut labore et dolore magna 
+                        aliqia. Ut enim ad minimm venim, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>title description, sep 2, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>some tex...</p>
+                    <p>Sunt inn cupla qui officia deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqia. Ut enim ad minimm venim, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+            </div>
+            <div class="rightcolmun">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <div class="fakeimg" style="height: 100px;">Image</div>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                </div>
+                <div class="card">
+                    <h3>Popular Post</h3>
+                    <div class="fakeimg">Image</div>
+                    <div class="fakeimg">Image</div>
+                    <div class="fakeimg">Image</div>
+                </div>
+                <div class="card">
+                    <h3>Follow Me</h3>
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <h2>Footer</h2>
+        </div>
+    </body>
+</html>
